@@ -18,8 +18,43 @@ function fondoGif() {
     figura.style.background = "url('img/rick.gif')";
     figura.style.backgroundSize = "cover"; // para que ocupe toda la figura
 }
+
+// Función de animación sencilla
+function animacion() {
+    let posicion = 0;      // posición inicial
+    let derecha = true;    // bandera: se mueve a la derecha
+    let esRojo = true;     // bandera: alterna colores
+
+    // Repetimos cada 50 milisegundos
+    const mover = setInterval(function() {
+        if (derecha) {
+            posicion += 5;  // avanza hacia la derecha
+            figura.style.marginLeft = posicion + "px";
+            if (posicion >= 100) {
+                derecha = false; // cuando llega a 100px, cambia dirección
+            }
+        } else {
+            posicion -= 5;  // regresa hacia la izquierda
+            figura.style.marginLeft = posicion + "px";
+            if (posicion <= 0) {
+                clearInterval(mover); // cuando llega al inicio, se detiene
+            }
+        }
+
+        // Cambiar color en cada paso
+        if (esRojo) {
+            figura.style.background = "red";
+        } else {
+            figura.style.background = "blue";
+        }
+        esRojo = !esRojo; // alternar entre rojo y azul
+    }, 50); // velocidad del movimiento
+}
+
+ 
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella)
     document.getElementById('btnGif').addEventListener('click', fondoGif);
+    document.getElementById('btnAnim').addEventListener('click', animacion);
 })
