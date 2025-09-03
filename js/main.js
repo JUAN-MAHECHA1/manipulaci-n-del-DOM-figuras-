@@ -84,7 +84,11 @@ function agregarParrafo() {
 
     parrafo.textContent = parrafoN;
 }
-
+// función: eliminar parrafo 
+function deletep(){
+    const parrafox = document.getElementById('extraParagraphs');
+    parrafox.remove();
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -99,6 +103,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnChangeTitle').addEventListener('click', cambiarTitulo);
     document.getElementById('btnChangeParagraph').addEventListener('click', cambiarParrafo);
     document.getElementById('btnAddParagraph').addEventListener('click', agregarParrafo);
+    document.getElementById('btnRemoveParagraph').addEventListener('click', deletep );
+
 
 
 })
