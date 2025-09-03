@@ -1,9 +1,10 @@
 // capturamos la figura a manipular
-const figura =document.getElementById('figure');
+const figura = document.getElementById('figure');
+let arriba = 0;
 
-function circulo(){
-   figura.style.borderRadius = "50%"
-   figura.style.background = "purple"
+function circulo() {
+    figura.style.borderRadius = "50%"
+    figura.style.background = "purple"
 }
 function estrella() {
     figura.style.clipPath = "polygon(50% 0%, 61% 35%, 98% 35%, \
@@ -26,7 +27,7 @@ function animacion() {
     let esRojo = true;     // bandera: alterna colores
 
     // Repetimos cada 50 milisegundos
-    const mover = setInterval(function() {
+    const mover = setInterval(function () {
         if (derecha) {
             posicion += 5;  // avanza hacia la derecha
             figura.style.marginLeft = posicion + "px";
@@ -50,11 +51,16 @@ function animacion() {
         esRojo = !esRojo; // alternar entre rojo y azul
     }, 50); // velocidad del movimiento
 }
+// Función: mover arriba
+function moverArriba() {
+    figura.style.transform = "translateY(-45px)";
+}
 
- 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella)
     document.getElementById('btnGif').addEventListener('click', fondoGif);
     document.getElementById('btnAnim').addEventListener('click', animacion);
+    document.getElementById('btnMoveUp').addEventListener('click', moverArriba);
+
 })
