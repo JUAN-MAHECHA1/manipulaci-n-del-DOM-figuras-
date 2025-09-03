@@ -59,6 +59,10 @@ function moverArriba() {
 function moverAbajo(){
     figura.style.transform = "translateY(40px)"
 }
+// funcion: Mover izquierda
+function moverIzquierda(){
+    figura.style.transform = "translateX(-100px)"
+}
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella)
@@ -66,5 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnAnim').addEventListener('click', animacion);
     document.getElementById('btnMoveUp').addEventListener('click', moverArriba);
     document.getElementById('btnMoveDown').addEventListener('click', moverAbajo);
+    document.getElementById('btnMoveLeft').addEventListener('click', moverIzquierda )
 
 })
