@@ -55,12 +55,16 @@ function animacion() {
 function moverArriba() {
     figura.style.transform = "translateY(-45px)";
 }
-
+// función: mover Mover abajo
+function moverAbajo(){
+    figura.style.transform = "translateY(40px)"
+}
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella)
     document.getElementById('btnGif').addEventListener('click', fondoGif);
     document.getElementById('btnAnim').addEventListener('click', animacion);
     document.getElementById('btnMoveUp').addEventListener('click', moverArriba);
+    document.getElementById('btnMoveDown').addEventListener('click', moverAbajo);
 
 })
