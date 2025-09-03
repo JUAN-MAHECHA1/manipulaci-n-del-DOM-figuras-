@@ -67,6 +67,11 @@ function moverIzquierda(){
 function moverDerecha(){
     figura.style.transform = "translateX(100px)";
 }
+// función: Cambiar título (prompt)
+function cambiarTitulo(){
+    const titulop = document.getElementById('mainTitle');
+    titulop.textContent = prompt("Escribe el nuevo título:");
+}
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella)
@@ -76,6 +81,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnMoveDown').addEventListener('click', moverAbajo);
     document.getElementById('btnMoveLeft').addEventListener('click', moverIzquierda);
     document.getElementById('btnMoveRight').addEventListener('click', moverDerecha);
+
+    document.getElementById('btnChangeTitle').addEventListener('click', cambiarTitulo);
 
 
 })
