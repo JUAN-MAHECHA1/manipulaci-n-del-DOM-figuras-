@@ -12,9 +12,14 @@ function estrella() {
     figura.style.borderRadius = "0"; // quitamos el círculo
     figura.style.background = "gold";
 }
-
+function fondoGif() {
+    figura.style.clipPath = "none"; // quitamos recortes si hubiera
+    figura.style.borderRadius = "0";
+    figura.style.background = "url('img/rick.gif')";
+    figura.style.backgroundSize = "cover"; // para que ocupe toda la figura
+}
 document.addEventListener('DOMContentLoaded', function(){
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella)
-    
+    document.getElementById('btnGif').addEventListener('click', fondoGif);
 })
