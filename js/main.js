@@ -72,6 +72,14 @@ function cambiarTitulo(){
     const titulop = document.getElementById('mainTitle');
     titulop.textContent = prompt("Escribe el nuevo título:");
 }
+// función: Cambiar párrafo (prompt)
+function cambiarParrafo(){
+    const parrafop = document.getElementById('mainParagraph');
+    parrafop.textContent = prompt("Escribe el nuevo parrafo ");
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella)
@@ -83,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnMoveRight').addEventListener('click', moverDerecha);
 
     document.getElementById('btnChangeTitle').addEventListener('click', cambiarTitulo);
+    document.getElementById('btnChangeParagraph').addEventListener('click', cambiarParrafo);
 
 
 })
