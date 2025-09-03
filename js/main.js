@@ -56,28 +56,34 @@ function moverArriba() {
     figura.style.transform = "translateY(-45px)";
 }
 // función: mover Mover abajo
-function moverAbajo(){
+function moverAbajo() {
     figura.style.transform = "translateY(40px)"
 }
 // función: Mover izquierda
-function moverIzquierda(){
+function moverIzquierda() {
     figura.style.transform = "translateX(-100px)"
 }
 // función: mover derecha
-function moverDerecha(){
+function moverDerecha() {
     figura.style.transform = "translateX(100px)";
 }
 // función: Cambiar título (prompt)
-function cambiarTitulo(){
+function cambiarTitulo() {
     const titulop = document.getElementById('mainTitle');
     titulop.textContent = prompt("Escribe el nuevo título:");
 }
 // función: Cambiar párrafo (prompt)
-function cambiarParrafo(){
+function cambiarParrafo() {
     const parrafop = document.getElementById('mainParagraph');
     parrafop.textContent = prompt("Escribe el nuevo parrafo ");
 }
+//función: Agregar un párrafo
+function agregarParrafo() {
+    let parrafoN = prompt("Escribe el nuevo parrafo ");
+    const parrafo = document.getElementById('extraParagraphs');
 
+    parrafo.textContent = parrafoN;
+}
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -92,6 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('btnChangeTitle').addEventListener('click', cambiarTitulo);
     document.getElementById('btnChangeParagraph').addEventListener('click', cambiarParrafo);
+    document.getElementById('btnAddParagraph').addEventListener('click', agregarParrafo);
 
 
 })
