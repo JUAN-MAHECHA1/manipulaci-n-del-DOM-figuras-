@@ -175,6 +175,15 @@ function abrirEnNuevaPestana() {
     enlace.textContent = "Visitar mi GitHub";
     enlace.target = "_blank"; 
 }
+function deshabilitarLink() {
+    const enlace = document.getElementById('mainLink');
+    enlace.removeAttribute("href"); 
+    enlace.style.pointerEvents = "none"; 
+    enlace.style.color = "gray"; 
+    alert("El enlace ha sido deshabilitado.");
+}
+
+
 document.getElementById('btnToggleImage').addEventListener('click', toggleImagen);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -201,5 +210,5 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnChangeAlt').addEventListener('click', cambiarAlt);
     document.getElementById('btnChangeLink').addEventListener('click', cambiarLink);
     document.getElementById('btnOpenLink').addEventListener('click', abrirEnNuevaPestana);
-
+    document.getElementById('btnDisableLink').addEventListener('click', deshabilitarLink);
 })
