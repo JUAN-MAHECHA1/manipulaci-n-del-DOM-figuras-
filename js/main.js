@@ -89,6 +89,12 @@ function deletep(){
     const parrafox = document.getElementById('extraParagraphs');
     parrafox.remove();
 }
+// función: color 
+function colorHex() {
+    const nuevoColor = prompt("Escribe un color nuevo (ej: #ff0000):");
+    figura.style.background = nuevoColor;
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -103,7 +109,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnChangeTitle').addEventListener('click', cambiarTitulo);
     document.getElementById('btnChangeParagraph').addEventListener('click', cambiarParrafo);
     document.getElementById('btnAddParagraph').addEventListener('click', agregarParrafo);
-    document.getElementById('btnRemoveParagraph').addEventListener('click', deletep );
+    document.getElementById('btnRemoveParagraph').addEventListener('click', deletep);
+
+    document.getElementById('btnHexColor').addEventListener('click', colorHex);
 
 
 
