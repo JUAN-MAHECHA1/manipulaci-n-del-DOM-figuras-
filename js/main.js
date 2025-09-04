@@ -116,18 +116,31 @@ function elegirFigura() {
             alert("Opción no válida");
     }
 }
-// Lista de imágenes
+// Lista de imágenes (se declara solo una vez)
 const imagenes = ["img/imagen.jpg", "img/imagen2.jpg", "img/imagen3.jpg"];
 let indice = 0;
 
+// Función siguiente
 function cambiarImagenSiguiente() {
     const imagen = document.getElementById('mainImage');
-    indice++; // avanzamos
+    indice++;
     if (indice >= imagenes.length) {
-        indice = 0; // si llega al final, vuelve al inicio
+        indice = 0;
     }
-    imagen.src = imagenes[indice]; // cambiamos la imagen
+    imagen.src = imagenes[indice];
 }
+
+// Función atrás
+function cambiarImagenAtras() {
+    const imagen = document.getElementById('mainImage');
+    indice--;
+    if (indice < 0) {
+        indice = imagenes.length - 1;
+    }
+    imagen.src = imagenes[indice];
+}
+
+
 
 
 
@@ -149,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnHexColor').addEventListener('click', colorHex);
     document.getElementById('btnChooseFigure').addEventListener('click', elegirFigura);
     document.getElementById('btnChangeImageNext').addEventListener('click', cambiarImagenSiguiente);
+    document.getElementById('btnChangeImagePrev').addEventListener('click', cambiarImagenAtras);
 
 
 
