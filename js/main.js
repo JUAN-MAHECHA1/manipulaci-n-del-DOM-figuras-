@@ -94,6 +94,29 @@ function colorHex() {
     const nuevoColor = prompt("Escribe un color nuevo (ej: #ff0000):");
     figura.style.background = nuevoColor;
 }
+function elegirFigura() {
+    const opcion = prompt("Elige una figura:\n1: Cuadrado\n2: Estrella\n3: Círculo");
+
+    switch(opcion) {
+        case "1": // cuadrado
+            figura.style.clipPath = "none";
+            figura.style.borderRadius = "0";
+            figura.style.background = "green";
+            break;
+
+        case "2": // estrella
+            estrella();
+            break;
+
+        case "3": // circulo
+            circulo();
+            break;
+
+        default:
+            alert("Opción no válida");
+    }
+}
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -112,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnRemoveParagraph').addEventListener('click', deletep);
 
     document.getElementById('btnHexColor').addEventListener('click', colorHex);
+    document.getElementById('btnChooseFigure').addEventListener('click', elegirFigura);
 
 
 
