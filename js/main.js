@@ -166,13 +166,16 @@ function cambiarLink() {
         enlace.textContent = "Visitar: " + nuevoLink; // cambiamos el texto visible
     }
 }
+// función:Abrir enlace en nueva pestaña
+function abrirEnNuevaPestana() {
+    window.open("https://github.com/JUAN-MAHECHA1", "_blank");
 
-
-
-
+    const enlace = document.getElementById('mainLink');
+    enlace.href = "https://github.com/JUAN-MAHECHA1";
+    enlace.textContent = "Visitar mi GitHub";
+    enlace.target = "_blank"; 
+}
 document.getElementById('btnToggleImage').addEventListener('click', toggleImagen);
-
-
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -197,5 +200,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('btnChangeAlt').addEventListener('click', cambiarAlt);
     document.getElementById('btnChangeLink').addEventListener('click', cambiarLink);
+    document.getElementById('btnOpenLink').addEventListener('click', abrirEnNuevaPestana);
 
 })
