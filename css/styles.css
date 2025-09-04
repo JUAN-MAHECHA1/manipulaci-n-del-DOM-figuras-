@@ -24,7 +24,7 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -69,7 +69,7 @@ button:hover {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -88,15 +88,26 @@ button:hover {
   margin-top: 20px;
 }
 
-hr{
-    margin: 40px 0;
+hr {
+  margin: 40px 0;
 }
 
-img{
-    margin-top: 30px;
+img {
+  margin-top: 30px;
 }
 
-#mainLink{
-    margin-top: 20px;
-    display: block;
+#mainLink {
+  margin-top: 20px;
+  display: block;
+}
+
+#figure {
+  width: 150px;
+  height: 150px;
+  background: red;
+  position: relative;
+}
+@keyframes mover {
+  from { left:0; background:red; }
+  to { left:100px; background:blue; }
 }
