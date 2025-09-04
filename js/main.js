@@ -139,8 +139,20 @@ function cambiarImagenAtras() {
     }
     imagen.src = imagenes[indice];
 }
+function toggleImagen() {
+    const imagen = document.getElementById('mainImage');
+    
+    if (imagen.style.display === "none" || imagen.style.display === "") {
+        imagen.style.display = "block"; 
+        imagen.style.margin = "0 auto"; // centra horizontalmente
+        imagen.style.display = "block"; // aseguramos que se comporte como bloque
+    } else {
+        imagen.style.display = "none"; 
+    }
+}
 
 
+document.getElementById('btnToggleImage').addEventListener('click', toggleImagen);
 
 
 
@@ -163,7 +175,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnChooseFigure').addEventListener('click', elegirFigura);
     document.getElementById('btnChangeImageNext').addEventListener('click', cambiarImagenSiguiente);
     document.getElementById('btnChangeImagePrev').addEventListener('click', cambiarImagenAtras);
-
-
+    document.getElementById('btnToggleImage').addEventListener('click', toggleImagen);
 
 })
