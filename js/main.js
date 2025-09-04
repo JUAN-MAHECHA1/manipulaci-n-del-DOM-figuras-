@@ -158,6 +158,16 @@ function cambiarAlt() {
         alert("Nuevo ALT asignado: " + nuevoAlt); // confirmación opcional
     }
 }
+function cambiarLink() {
+    const enlace = document.getElementById('mainLink');
+    const nuevoLink = prompt("Escribe la nueva URL para el enlace:");
+    if (nuevoLink) {
+        enlace.href = nuevoLink; // cambiamos el destino
+        enlace.textContent = "Visitar: " + nuevoLink; // cambiamos el texto visible
+    }
+}
+
+
 
 
 document.getElementById('btnToggleImage').addEventListener('click', toggleImagen);
@@ -186,5 +196,6 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnToggleImage').addEventListener('click', toggleImagen);
 
     document.getElementById('btnChangeAlt').addEventListener('click', cambiarAlt);
+    document.getElementById('btnChangeLink').addEventListener('click', cambiarLink);
 
 })
