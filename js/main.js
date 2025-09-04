@@ -116,6 +116,18 @@ function elegirFigura() {
             alert("Opción no válida");
     }
 }
+// Lista de imágenes
+const imagenes = ["img/imagen.jpg", "img/imagen2.jpg", "img/imagen3.jpg"];
+let indice = 0;
+
+function cambiarImagenSiguiente() {
+    const imagen = document.getElementById('mainImage');
+    indice++; // avanzamos
+    if (indice >= imagenes.length) {
+        indice = 0; // si llega al final, vuelve al inicio
+    }
+    imagen.src = imagenes[indice]; // cambiamos la imagen
+}
 
 
 
@@ -136,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('btnHexColor').addEventListener('click', colorHex);
     document.getElementById('btnChooseFigure').addEventListener('click', elegirFigura);
+    document.getElementById('btnChangeImageNext').addEventListener('click', cambiarImagenSiguiente);
 
 
 
