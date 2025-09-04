@@ -150,6 +150,14 @@ function toggleImagen() {
         imagen.style.display = "none"; 
     }
 }
+function cambiarAlt() {
+    const imagen = document.getElementById('mainImage');
+    const nuevoAlt = prompt("Escribe el nuevo texto para el atributo ALT:");
+    if (nuevoAlt) {
+        imagen.alt = nuevoAlt; // cambiamos el atributo ALT
+        alert("Nuevo ALT asignado: " + nuevoAlt); // confirmación opcional
+    }
+}
 
 
 document.getElementById('btnToggleImage').addEventListener('click', toggleImagen);
@@ -176,5 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnChangeImageNext').addEventListener('click', cambiarImagenSiguiente);
     document.getElementById('btnChangeImagePrev').addEventListener('click', cambiarImagenAtras);
     document.getElementById('btnToggleImage').addEventListener('click', toggleImagen);
+
+    document.getElementById('btnChangeAlt').addEventListener('click', cambiarAlt);
 
 })
